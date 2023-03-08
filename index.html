@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Workout Randomizer</title>
+</head>
+<body>
+  <section id="home-page">
+    <nav class="navbar" id="nav">
+      <ul>
+        <li><a href="#home-page">Home</a></li>
+        <!-- <li><a href="#lifts">Lift List</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">How to Use</a></li> -->
+      </ul>
+    </nav>
+
+    <h1>Workout Randomizer</h1>
+
+    <fieldset>
+      <legend>Select your day:</legend>
+
+      <div class="lift-days">
+        <input type="radio" id="push" name="lift" value="push">
+          <label for="push" class="lift-cat" id="push-label">Push</label>
+        <input type="radio" id="pull" name="lift" value="pull">
+          <label for="pull" class="lift-cat">Pull</label>
+        <input type="radio" id="legs" name="lift" value="legs">
+          <label for="legs" class="lift-cat">Legs</label>  
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Select your intensity:</legend>
+
+      <div class="intensity">
+        <input type="radio" id="light" name="intensity" value="light">
+          <label for="light" class="light-int" id="light-label">Light</label>
+        <input type="radio" id="moderate" name="intensity" value="moderate">
+          <label for="moderate" class="moderate-int" id="moderate-label">Moderate</label>
+        <input type="radio" id="vigorous" name="intensity" value="vigorous">
+          <label for="vigorous" class="vigorous-int" id="vigorous-label">Vigorous</label>
+      </div>
+    </fieldset>
+
+    <button class="submit" value="submit" id="submit"><a id="submitBtn" href="#lifts">Submit</a></button>
+  </section>
+
+
+  <!-- Hitting submit scrolls the page to a list of randomly generated workouts from the lift day selections -->
+  <section id="lifts">
+    <div id="lift-container">
+      <!-- <div class="card" id="card">
+        <h3></h3>
+        <p><span id="sets"></span> sets of <span id="reps"></span></p>
+        <p>Weight:</p>
+        <input class="weight" type="text">
+        <button id="completed" class="completed" type="button"><i class="fa-solid fa-check"></i></button>
+        <button id="failed" class="failed" type="button"><i class="fa-solid fa-x"></i></button>
+      </div> -->
+    </div>
+  </section>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
