@@ -196,9 +196,14 @@ fieldset legend {
   margin-bottom: 8px;
 }
 
-@media (max-width: 425px) {
+@media screen and (max-width: 425px) {
   #home-page {
     background-size: 100%;
     background-position: center;
+  }
+
+  .card {
+    width: 40%;
+    height: 25%;
   }
 }

@@ -253,8 +253,6 @@ function createCard() {
     <p><span id="sets">${randomPush.sets}</span> sets of <span id="reps">${randomPush.reps}</span></p>
     <p>Weight:</p>
     <input class="weight" type="text">
-    <button id="completed" class="completed" type="button"><i class="fa-solid fa-check"></i></button>
-    <button id="failed" class="failed" type="button"><i class="fa-solid fa-x"></i></button>
   `
   } else if(pull.checked) {
     randomPull = pullList[Math.floor(Math.random() * 12)];
@@ -263,8 +261,6 @@ function createCard() {
     <p><span id="sets">${randomPull.sets}</span> sets of <span id="reps">${randomPull.reps}</span></p>
     <p>Weight:</p>
     <input class="weight" type="text">
-    <button id="completed" class="completed" type="button"><i class="fa-solid fa-check"></i></button>
-    <button id="failed" class="failed" type="button"><i class="fa-solid fa-x"></i></button>
   `
   } else if(legs.checked) {
     randomLegs = legList[Math.floor(Math.random() * 10)];
@@ -273,8 +269,6 @@ function createCard() {
     <p><span id="sets">${randomLegs.sets}</span> sets of <span id="reps">${randomLegs.reps}</span></p>
     <p>Weight:</p>
     <input class="weight" type="text">
-    <button id="completed" class="completed" type="button"><i class="fa-solid fa-check"></i></button>
-    <button id="failed" class="failed" type="button"><i class="fa-solid fa-x"></i></button>
   `
   }
   liftContainer.appendChild(newCard);
