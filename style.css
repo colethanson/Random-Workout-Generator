@@ -176,6 +176,7 @@ fieldset legend {
   #home-page {
     background-size: 100%;
     background-position: center;
+    width: 100vw;
   }
 
   .card {
