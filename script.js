@@ -68,6 +68,41 @@ const pushList = [
     reps: '15',
     number: '10',
     day: 'push',
+  },
+  {
+    name: 'Dips',
+    sets: '3',
+    reps: '8',
+    number: '11',
+    day: 'push',
+  },
+  {
+    name: 'Skull Crushers',
+    sets: '3',
+    reps: '8',
+    number: '12',
+    day: 'push',
+  },
+  {
+    name: 'Overhead Tricep Extension',
+    sets: '3',
+    reps: '8',
+    number: '13',
+    day: 'push',
+  },
+  {
+    name: 'Close Grip Bench Press',
+    sets: '5',
+    reps: '5',
+    number: '14',
+    day: 'push',
+  },
+  {
+    name: 'Pushups',
+    sets: '5',
+    reps: '15',
+    number: '15',
+    day: 'push',
   }
 ]
 
@@ -80,7 +115,7 @@ const pullList = [
     day: 'pull',
   },
   {
-    name: 'Rows',
+    name: 'Barbell Rows',
     sets: '3',
     reps: '5',
     number: '2',
@@ -155,6 +190,27 @@ const pullList = [
     reps: '8',
     number: '12',
     day: 'pull',
+  },
+  {
+    name: 'Chest Supported Row',
+    sets: '3',
+    reps: '8',
+    number: '13',
+    day: 'pull',
+  },
+  {
+    name: 'Renegade Row',
+    sets: '3',
+    reps: '8',
+    number: '14',
+    day: 'pull',
+  },
+  {
+    name: 'Dumbbell Pullovers',
+    sets: '3',
+    reps: '8',
+    number: '15',
+    day: 'pull',
   }
 ]
 
@@ -228,6 +284,41 @@ const legList = [
     reps: '15',
     number: '10',
     day: 'legs',
+  },
+  {
+    name: 'Front Squat',
+    sets: '5',
+    reps: '5',
+    number: '11',
+    day: 'legs',
+  },
+  {
+    name: 'Good Mornings',
+    sets: '3',
+    reps: '8',
+    number: '12',
+    day: 'legs',
+  },
+  {
+    name: 'Reverse Kettlebell Lunge',
+    sets: '4',
+    reps: '10',
+    number: '13',
+    day: 'legs',
+  },
+  {
+    name: 'Pistol Squat',
+    sets: '1',
+    reps: '5',
+    number: '14',
+    day: 'legs',
+  },
+  {
+    name: 'Single Leg Kettlebell Deadlift',
+    sets: '4',
+    reps: '10',
+    number: '15',
+    day: 'legs',
   }
 ]
 
@@ -247,21 +338,21 @@ function createCard() {
   const newCard = document.createElement('div')
   newCard.classList.add('card')
   if(push.checked) {
-    randomPush = pushList[Math.floor(Math.random() * 10)];
+    randomPush = pushList[Math.floor(Math.random() * 15)];
     newCard.innerHTML = `
     <h3>${randomPush.name}</h3>
     <p><span id="sets">${randomPush.sets}</span> sets of <span id="reps">${randomPush.reps}</span></p>
     <input class="weight" type="text">
   `
   } else if(pull.checked) {
-    randomPull = pullList[Math.floor(Math.random() * 12)];
+    randomPull = pullList[Math.floor(Math.random() * 15)];
     newCard.innerHTML = `
     <h3>${randomPull.name}</h3>
     <p><span id="sets">${randomPull.sets}</span> sets of <span id="reps">${randomPull.reps}</span></p>
     <input class="weight" type="text">
   `
   } else if(legs.checked) {
-    randomLegs = legList[Math.floor(Math.random() * 10)];
+    randomLegs = legList[Math.floor(Math.random() * 15)];
     newCard.innerHTML = `
     <h3>${randomLegs.name}</h3>
     <p><span id="sets">${randomLegs.sets}</span> sets of <span id="reps">${randomLegs.reps}</span></p>
