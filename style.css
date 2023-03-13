@@ -197,7 +197,8 @@ fieldset legend {
 }
 
 @media (max-width: 425px) {
-  #lift-container {
-    overflow-y: auto;
+  #home-page {
+    background-size: 100%;
+    background-position: center;
   }
 }
