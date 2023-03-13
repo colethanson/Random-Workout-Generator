@@ -243,16 +243,6 @@ const vigorous = document.getElementById('vigorous');
 const submitBtn = document.getElementById('submit');
 const liftContainer = document.getElementById('lift-container');
 
-/* completedBtn.addEventListener('click', () => {
-  card.classList.remove('failed')
-  card.classList.add('completed')
-})
-
-failedBtn.addEventListener('click', () => {
-  card.classList.remove('completed')
-  card.classList.add('failed')
-}) */
-
 function createCard() {
   const newCard = document.createElement('div')
   newCard.classList.add('card')
@@ -298,26 +288,11 @@ function intensitySubmit() {
   submitBtn.addEventListener('click', () => {
     removeCard();
     if(light.checked) {
-      createCard()
-      createCard()
-      createCard()
-      createCard()
+      for (let i = 0; i < 4; i++) createCard(i);
     } else if(moderate.checked) {
-      createCard()
-      createCard()
-      createCard()
-      createCard()
-      createCard()
-      createCard()
+      for (let i = 0; i < 6; i++) createCard(i);
     } else if(vigorous.checked) {
-      createCard()
-      createCard()
-      createCard()
-      createCard()
-      createCard()
-      createCard()
-      createCard()
-      createCard()
+      for (let i = 0; i < 8; i++) createCard(i);
     }
   })
 }
