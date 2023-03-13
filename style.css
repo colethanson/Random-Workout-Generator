@@ -137,30 +137,6 @@ fieldset legend {
   margin: 2px;
 }
 
-.card.completed {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: black;
-  background-color: rgb(19, 204, 19);
-  margin: 10px 15px;
-  border-radius: 10px;
-}
-
-.card.failed {
-  width: 200px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: black;
-  background-color: rgb(204, 19, 19);
-  margin: 10px 15px;
-  border-radius: 10px;
-}
-
 .weight {
   width: 50px;
   height: 25px;
