@@ -6,6 +6,7 @@
 }
 
 body {
+  background-color: black;
   font-family: 'Roboto', sans-serif;
   color: whitesmoke;
   margin: 0;
@@ -18,6 +19,7 @@ body {
 
 .navbar {
   background: linear-gradient(rgb(165, 15, 15), rgba(0,0,0,0));
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,4 +192,10 @@ fieldset legend {
 
 #failed {
   margin-bottom: 8px;
+}
+
+@media (max-width: 425px) {
+  #lift-container {
+    overflow-y: auto;
+  }
 }
