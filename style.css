@@ -19,6 +19,7 @@ body {
 
 .navbar {
   background: linear-gradient(rgb(165, 15, 15), rgba(0,0,0,0));
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,11 +56,13 @@ section {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
   background-repeat: no-repeat;
   background-position: bottom 45% right 10%;
-  background-size: cover;
+  background-size: 110%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 fieldset {
