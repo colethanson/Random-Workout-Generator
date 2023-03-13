@@ -334,11 +334,23 @@ const vigorous = document.getElementById('vigorous');
 const submitBtn = document.getElementById('submit');
 const liftContainer = document.getElementById('lift-container');
 
+let haveIt = []
+
 function createCard() {
   const newCard = document.createElement('div')
   newCard.classList.add('card')
   if(push.checked) {
     randomPush = pushList[Math.floor(Math.random() * 15)];
+    random = Number(randomPush);
+    if(!haveIt.includes(randomPush)) {
+      haveIt.push(randomPush);
+    } else {
+      if(haveIt.length < 15) {
+        return createCard(15);
+      } else {
+        return false;
+      } 
+    }
     newCard.innerHTML = `
     <h3>${randomPush.name}</h3>
     <p><span id="sets">${randomPush.sets}</span> sets of <span id="reps">${randomPush.reps}</span></p>
@@ -346,6 +358,16 @@ function createCard() {
   `
   } else if(pull.checked) {
     randomPull = pullList[Math.floor(Math.random() * 15)];
+    random = Number(randomPull);
+    if(!haveIt.includes(randomPull)) {
+      haveIt.push(randomPull);
+    } else {
+      if(haveIt.length < 15) {
+        return createCard(15);
+      } else {
+        return false;
+      } 
+    }
     newCard.innerHTML = `
     <h3>${randomPull.name}</h3>
     <p><span id="sets">${randomPull.sets}</span> sets of <span id="reps">${randomPull.reps}</span></p>
@@ -353,6 +375,16 @@ function createCard() {
   `
   } else if(legs.checked) {
     randomLegs = legList[Math.floor(Math.random() * 15)];
+    random = Number(randomLegs);
+    if(!haveIt.includes(randomLegs)) {
+      haveIt.push(randomLegs);
+    } else {
+      if(haveIt.length < 15) {
+        return createCard(15);
+      } else {
+        return false;
+      } 
+    }
     newCard.innerHTML = `
     <h3>${randomLegs.name}</h3>
     <p><span id="sets">${randomLegs.sets}</span> sets of <span id="reps">${randomLegs.reps}</span></p>
