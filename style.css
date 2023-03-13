@@ -203,7 +203,16 @@ fieldset legend {
   }
 
   .card {
-    width: 40%;
-    height: 25%;
+    width: 45%;
+    height: 20%;
+  }
+
+  .card h2 {
+    font-size: 16px;
+  }
+
+  .card p {
+    margin: 0;
+    font-size: 12px;
   }
 }

@@ -251,7 +251,6 @@ function createCard() {
     newCard.innerHTML = `
     <h3>${randomPush.name}</h3>
     <p><span id="sets">${randomPush.sets}</span> sets of <span id="reps">${randomPush.reps}</span></p>
-    <p>Weight:</p>
     <input class="weight" type="text">
   `
   } else if(pull.checked) {
@@ -259,7 +258,6 @@ function createCard() {
     newCard.innerHTML = `
     <h3>${randomPull.name}</h3>
     <p><span id="sets">${randomPull.sets}</span> sets of <span id="reps">${randomPull.reps}</span></p>
-    <p>Weight:</p>
     <input class="weight" type="text">
   `
   } else if(legs.checked) {
@@ -267,7 +265,6 @@ function createCard() {
     newCard.innerHTML = `
     <h3>${randomLegs.name}</h3>
     <p><span id="sets">${randomLegs.sets}</span> sets of <span id="reps">${randomLegs.reps}</span></p>
-    <p>Weight:</p>
     <input class="weight" type="text">
   `
   }
