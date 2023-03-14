@@ -349,7 +349,7 @@ function createCard() {
         return createCard(15);
       } else {
         return false;
-      } 
+      }
     }
     newCard.innerHTML = `
     <h3>${randomPush.name}</h3>
@@ -395,6 +395,7 @@ function createCard() {
 }
 
 function removeCard() {
+  haveIt = [];
   liftContainer.innerHTML = '';
 }
 
@@ -402,10 +403,13 @@ function intensitySubmit() {
   submitBtn.addEventListener('click', () => {
     removeCard();
     if(light.checked) {
+      removeCard()
       for (let i = 0; i < 4; i++) createCard(i);
     } else if(moderate.checked) {
+      removeCard()
       for (let i = 0; i < 6; i++) createCard(i);
     } else if(vigorous.checked) {
+      removeCard()
       for (let i = 0; i < 8; i++) createCard(i);
     }
   })
@@ -415,20 +419,20 @@ function workoutTypeSubmit() {
   submitBtn.addEventListener('click', () => {
     if(push.checked) {
       function randomPushLift() {
-        randomPush = pushList[Math.floor(Math.random() * 10)];
-        console.log(randomPush.name, randomPush.sets, randomPush.reps);
+        randomPush = pushList[Math.floor(Math.random() * 15)];
+        return(randomPush.name, randomPush.sets, randomPush.reps);
       }
       randomPushLift()
     } else if(pull.checked) {
       function randomPullLift() {
-        randomPull = legList[Math.floor(Math.random() * 12)];
-        console.log(randomPull.name, randomPull.sets, randomPull.reps);
+        randomPull = legList[Math.floor(Math.random() * 15)];
+        return(randomPull.name, randomPull.sets, randomPull.reps);
       }
       randomPullLift()
     } else if(legs.checked) {
       function randomLegLift() {
-        randomLeg = legList[Math.floor(Math.random() * 12)];
-        console.log(randomLeg.name, randomLeg.sets, randomLeg.reps);
+        randomLeg = legList[Math.floor(Math.random() * 15)];
+        return(randomLeg.name, randomLeg.sets, randomLeg.reps);
       }
       randomLegLift()
     }
