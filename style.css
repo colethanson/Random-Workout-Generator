@@ -117,7 +117,8 @@ fieldset legend {
 }
 
 .card {
-  width: 200px;
+  width: 175px;
+  height: 175px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -179,9 +180,18 @@ fieldset legend {
     width: 100vw;
   }
 
+  #lifts {
+    overflow: auto;
+  }
+
+  #lift-container {
+    margin-top: 125px;
+  }
+
   .card {
-    width: 35%;
-    height: 20%;
+    width: 150px;
+    height: 150px;
+    margin: 5px;
   }
 
   .card h2 {
