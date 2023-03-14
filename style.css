@@ -180,12 +180,8 @@ fieldset legend {
     width: 100vw;
   }
 
-  #lifts {
-    overflow: auto;
-  }
-
   #lift-container {
-    margin-top: 70px;
+    margin-top: 60px;
     margin-bottom: 80px;
   }
 
