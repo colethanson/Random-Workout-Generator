@@ -128,14 +128,52 @@ fieldset legend {
   background-color: whitesmoke;
   margin: 10px 15px;
   border-radius: 10px;
+  position: relative;
 }
 
-.card h2 {
+.card.completed {
+  background-color: green;
+}
+
+.card h3 {
   margin: 0px;
+  position: absolute;
+  top: 5px;
+}
+
+.card h4 {
+  position: absolute;
+  bottom: 12px;
 }
 
 .card p {
+  position: absolute;
+  top: 48px;
   margin: 2px;
+}
+
+.card .weight-word {
+  position: absolute;
+  top: 67px;
+  font-size: 13px;
+}
+
+.card input {
+  position: absolute;
+  top: 85px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#card-buttons {
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+#card-buttons button {
+  width: 50px;
 }
 
 .weight {
@@ -167,10 +205,6 @@ fieldset legend {
 
 .card button:active {
   transform: scale(0.98);
-}
-
-#failed {
-  margin-bottom: 8px;
 }
 
 @media screen and (max-width: 425px) {

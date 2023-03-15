@@ -354,7 +354,13 @@ function createCard() {
     newCard.innerHTML = `
     <h3>${randomPush.name}</h3>
     <p><span id="sets">${randomPush.sets}</span> sets of <span id="reps">${randomPush.reps}</span></p>
+    <p class="weight-word">Weight:</p>
     <input class="weight" type="text">
+    <h4>Completed?</h4>
+    <div id="card-buttons">
+      <button class="pass-or-fail pass" id="completed"><i class="fa-solid fa-check"></i></button>
+      <button class="pass-or-fail fail" id="failed"><i class="fa-solid fa-x"></i></button>
+    </div>
   `
   } else if(pull.checked) {
     randomPull = pullList[Math.floor(Math.random() * 15)];
@@ -371,7 +377,13 @@ function createCard() {
     newCard.innerHTML = `
     <h3>${randomPull.name}</h3>
     <p><span id="sets">${randomPull.sets}</span> sets of <span id="reps">${randomPull.reps}</span></p>
+    <p class="weight-word">Weight:</p>
     <input class="weight" type="text">
+    <h4>Completed?</h4>
+    <div id="card-buttons">
+      <button class="pass-or-fail pass" id="completed"><i class="fa-solid fa-check"></i></button>
+      <button class="pass-or-fail fail" id="failed"><i class="fa-solid fa-x"></i></button>
+    </div>
   `
   } else if(legs.checked) {
     randomLegs = legList[Math.floor(Math.random() * 15)];
@@ -388,7 +400,13 @@ function createCard() {
     newCard.innerHTML = `
     <h3>${randomLegs.name}</h3>
     <p><span id="sets">${randomLegs.sets}</span> sets of <span id="reps">${randomLegs.reps}</span></p>
+    <p class="weight-word">Weight:</p>
     <input class="weight" type="text">
+    <h4>Completed?</h4>
+    <div id="card-buttons">
+      <button class="pass-or-fail pass" id="completed"><i class="fa-solid fa-check"></i></button>
+      <button class="pass-or-fail fail" id="failed"><i class="fa-solid fa-x"></i></button>
+    </div>
   `
   }
   liftContainer.appendChild(newCard);
@@ -400,7 +418,7 @@ function removeCard() {
 }
 
 function intensitySubmit() {
-  submitBtn.addEventListener('click', () => {
+  submitBtn.addEventListener('click', (e) => {
     removeCard();
     if(light.checked) {
       removeCard()
@@ -438,6 +456,10 @@ function workoutTypeSubmit() {
     }
   })
 }
+
+/* completedBtn.addEventListener('click', () => {
+  card.classList.toggle('completed');
+}) */
 
 workoutTypeSubmit()
 intensitySubmit()
