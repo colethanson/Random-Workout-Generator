@@ -131,9 +131,15 @@ fieldset legend {
   position: relative;
 }
 
-.card.completed {
-  background-color: green;
+.yes {
+  background-color: rgb(64, 219, 64);
 }
+/* rgb(64, 219, 64) */
+
+.no {
+  background-color: rgb(212, 25, 25);
+}
+/* rgb(212, 25, 25) */
 
 .card h3 {
   margin: 0px;
@@ -148,19 +154,13 @@ fieldset legend {
 
 .card p {
   position: absolute;
-  top: 48px;
+  top: 60px;
   margin: 2px;
-}
-
-.card .weight-word {
-  position: absolute;
-  top: 67px;
-  font-size: 13px;
 }
 
 .card input {
   position: absolute;
-  top: 85px;
+  top: 82px;
   left: 50%;
   transform: translateX(-50%);
 }

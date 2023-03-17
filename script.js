@@ -322,8 +322,6 @@ const legList = [
   }
 ]
 
-const completedBtn = document.getElementById('completed');
-const failedBtn = document.getElementById('failed');
 const card = document.getElementById("card");
 const push = document.getElementById('push');
 const pull = document.getElementById('pull');
@@ -333,8 +331,23 @@ const moderate = document.getElementById('moderate');
 const vigorous = document.getElementById('vigorous');
 const submitBtn = document.getElementById('submit');
 const liftContainer = document.getElementById('lift-container');
+const passBtn = document.getElementById('yes');
+const failBtn = document.getElementById('no');
 
 let haveIt = []
+
+const yesButtons = document.querySelectorAll('button[type="yesButton"]');
+const noButtons = document.querySelectorAll('button[type="noButton"]')
+
+function checkYes() {
+  document.getElementById('yes').setAttribute('class', 'yes');
+}
+
+function checkNo() {
+  document.getElementById('no').setAttribute('class', 'no');
+}
+
+noButtons.forEach(checkNo)
 
 function createCard() {
   const newCard = document.createElement('div')
@@ -354,12 +367,11 @@ function createCard() {
     newCard.innerHTML = `
     <h3>${randomPush.name}</h3>
     <p><span id="sets">${randomPush.sets}</span> sets of <span id="reps">${randomPush.reps}</span></p>
-    <p class="weight-word">Weight:</p>
-    <input class="weight" type="text">
+    <input class="weight" type="text" placeholder="Weight">
     <h4>Completed?</h4>
     <div id="card-buttons">
-      <button class="pass-or-fail pass" id="completed"><i class="fa-solid fa-check"></i></button>
-      <button class="pass-or-fail fail" id="failed"><i class="fa-solid fa-x"></i></button>
+      <button type="yesButton" onclick="checkYes()" class="" id="yes"><i class="fa-solid fa-check"></i></button>
+      <button type="noButton" onclick="checkNo()" class="" id="no"><i class="fa-solid fa-x"></i></button>
     </div>
   `
   } else if(pull.checked) {
@@ -377,12 +389,11 @@ function createCard() {
     newCard.innerHTML = `
     <h3>${randomPull.name}</h3>
     <p><span id="sets">${randomPull.sets}</span> sets of <span id="reps">${randomPull.reps}</span></p>
-    <p class="weight-word">Weight:</p>
-    <input class="weight" type="text">
+    <input class="weight" type="text" placeholder="Weight">
     <h4>Completed?</h4>
     <div id="card-buttons">
-      <button class="pass-or-fail pass" id="completed"><i class="fa-solid fa-check"></i></button>
-      <button class="pass-or-fail fail" id="failed"><i class="fa-solid fa-x"></i></button>
+      <button type="yesButton" onclick="checkYes()" class="" id="yes"><i class="fa-solid fa-check"></i></button>
+      <button type="noButton" onclick="checkNo()" class="" id="no"><i class="fa-solid fa-x"></i></button>
     </div>
   `
   } else if(legs.checked) {
@@ -400,12 +411,11 @@ function createCard() {
     newCard.innerHTML = `
     <h3>${randomLegs.name}</h3>
     <p><span id="sets">${randomLegs.sets}</span> sets of <span id="reps">${randomLegs.reps}</span></p>
-    <p class="weight-word">Weight:</p>
-    <input class="weight" type="text">
+    <input class="weight" type="text" placeholder="Weight">
     <h4>Completed?</h4>
     <div id="card-buttons">
-      <button class="pass-or-fail pass" id="completed"><i class="fa-solid fa-check"></i></button>
-      <button class="pass-or-fail fail" id="failed"><i class="fa-solid fa-x"></i></button>
+      <button type="yesButton" onclick="checkYes()" class="" id="yes"><i class="fa-solid fa-check"></i></button>
+      <button type="noButton" onclick="checkNo()" class="" id="no"><i class="fa-solid fa-x"></i></button>
     </div>
   `
   }
@@ -418,7 +428,7 @@ function removeCard() {
 }
 
 function intensitySubmit() {
-  submitBtn.addEventListener('click', (e) => {
+  submitBtn.addEventListener('click', () => {
     removeCard();
     if(light.checked) {
       removeCard()
@@ -457,9 +467,5 @@ function workoutTypeSubmit() {
   })
 }
 
-/* completedBtn.addEventListener('click', () => {
-  card.classList.toggle('completed');
-}) */
-
-workoutTypeSubmit()
-intensitySubmit()
+workoutTypeSubmit();
+intensitySubmit();
