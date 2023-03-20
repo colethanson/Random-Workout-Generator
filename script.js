@@ -406,8 +406,8 @@ function createCard() {
     <input class="weight" type="text" placeholder="Weight">
     <h4>Completed?</h4>
     <div id="card-buttons">
-      <button type="yesButton" onclick="checkYes()" class="" id="yes"><i class="fa-solid fa-check"></i></button>
-      <button type="noButton" onclick="checkNo()" class="" id="no"><i class="fa-solid fa-x"></i></button>
+      <button type="yesButton" class="completed"><i class="fa-solid fa-check"></i></button>
+      <button type="noButton" class="failed"><i class="fa-solid fa-x"></i></button>
     </div>
   `
   } else if(legs.checked) {
@@ -428,8 +428,8 @@ function createCard() {
     <input class="weight" type="text" placeholder="Weight">
     <h4>Completed?</h4>
     <div id="card-buttons">
-      <button type="yesButton" onclick="checkYes()" class="" id="yes"><i class="fa-solid fa-check"></i></button>
-      <button type="noButton" onclick="checkNo()" class="" id="no"><i class="fa-solid fa-x"></i></button>
+      <button type="yesButton" class="completed"><i class="fa-solid fa-check"></i></button>
+      <button type="noButton" class="failed"><i class="fa-solid fa-x"></i></button>
     </div>
   `
   }
