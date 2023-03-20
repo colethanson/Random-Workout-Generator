@@ -131,12 +131,20 @@ fieldset legend {
   position: relative;
 }
 
-.yes {
+.completed {
+  background-color: whitesmoke;
+}
+
+.failed {
+  background-color: whitesmoke;
+}
+
+.green {
   background-color: rgb(64, 219, 64);
 }
 /* rgb(64, 219, 64) */
 
-.no {
+.red {
   background-color: rgb(212, 25, 25);
 }
 /* rgb(212, 25, 25) */

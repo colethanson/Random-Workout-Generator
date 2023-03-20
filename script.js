@@ -331,23 +331,37 @@ const moderate = document.getElementById('moderate');
 const vigorous = document.getElementById('vigorous');
 const submitBtn = document.getElementById('submit');
 const liftContainer = document.getElementById('lift-container');
-const passBtn = document.getElementById('yes');
-const failBtn = document.getElementById('no');
 
 let haveIt = []
 
-const yesButtons = document.querySelectorAll('button[type="yesButton"]');
-const noButtons = document.querySelectorAll('button[type="noButton"]')
+function getCompletedButtons() {
+  submitBtn.addEventListener('click', function(){
+    setTimeout(function() {
+      const completedBtn = document.querySelectorAll('.completed');
 
-function checkYes() {
-  document.getElementById('yes').setAttribute('class', 'yes');
+      completedBtn.forEach(button => {
+        button.addEventListener('click', () => {
+          button.classList.toggle('green');
+        })
+      })
+    }, 100)});
 }
 
-function checkNo() {
-  document.getElementById('no').setAttribute('class', 'no');
+function getFailedButtons() {
+  submitBtn.addEventListener('click', function(){
+    setTimeout(function() {
+      const failedBtn = document.querySelectorAll('.failed');
+
+      failedBtn.forEach(button => {
+        button.addEventListener('click', () => {
+          button.classList.toggle('red');
+        })
+      })
+    }, 100)});
 }
 
-noButtons.forEach(checkNo)
+getCompletedButtons();
+getFailedButtons();
 
 function createCard() {
   const newCard = document.createElement('div')
@@ -370,8 +384,8 @@ function createCard() {
     <input class="weight" type="text" placeholder="Weight">
     <h4>Completed?</h4>
     <div id="card-buttons">
-      <button type="yesButton" onclick="checkYes()" class="" id="yes"><i class="fa-solid fa-check"></i></button>
-      <button type="noButton" onclick="checkNo()" class="" id="no"><i class="fa-solid fa-x"></i></button>
+      <button type="yesButton" class="completed" id=""><i class="fa-solid fa-check"></i></button>
+      <button type="noButton" class="failed" id=""><i class="fa-solid fa-x"></i></button>
     </div>
   `
   } else if(pull.checked) {
