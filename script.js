@@ -332,8 +332,14 @@ const vigorous = document.getElementById('vigorous');
 const submitBtn = document.getElementById('submit');
 const liftContainer = document.getElementById('lift-container');
 const yourWorkout = document.getElementById('your-workout');
+const reroll = document.querySelector('.reroll');
+const home = document.getElementById('home');
+
+
 
 let haveIt = []
+
+
 
 function getCompletedButtons() {
   submitBtn.addEventListener('click', function(){
@@ -364,6 +370,8 @@ function getFailedButtons() {
 getCompletedButtons();
 getFailedButtons();
 
+
+
 function workoutTab() {
   submitBtn.addEventListener('click', () => {
     yourWorkout.classList.remove('hidden');
@@ -371,6 +379,24 @@ function workoutTab() {
 }
 
 workoutTab();
+
+
+
+function rerollBtn() {
+  submitBtn.addEventListener('click', () => {
+    reroll.classList.add('show');
+  })
+  yourWorkout.addEventListener('click', () => {
+    reroll.classList.add('show');
+  })
+  home.addEventListener('click', () => {
+    reroll.classList.remove('show');
+  })
+}
+
+rerollBtn();
+
+
 
 function createCard() {
   const newCard = document.createElement('div')
@@ -445,10 +471,14 @@ function createCard() {
   liftContainer.appendChild(newCard);
 }
 
+
+
 function removeCard() {
   haveIt = [];
   liftContainer.innerHTML = '';
 }
+
+
 
 function intensitySubmit() {
   submitBtn.addEventListener('click', () => {
@@ -489,6 +519,8 @@ function workoutTypeSubmit() {
     }
   })
 }
+
+
 
 workoutTypeSubmit();
 intensitySubmit();
