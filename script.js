@@ -331,6 +331,7 @@ const moderate = document.getElementById('moderate');
 const vigorous = document.getElementById('vigorous');
 const submitBtn = document.getElementById('submit');
 const liftContainer = document.getElementById('lift-container');
+const yourWorkout = document.getElementById('your-workout');
 
 let haveIt = []
 
@@ -362,6 +363,14 @@ function getFailedButtons() {
 
 getCompletedButtons();
 getFailedButtons();
+
+function workoutTab() {
+  submitBtn.addEventListener('click', () => {
+    yourWorkout.classList.remove('hidden');
+  })
+}
+
+workoutTab();
 
 function createCard() {
   const newCard = document.createElement('div')
